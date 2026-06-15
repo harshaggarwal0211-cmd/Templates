@@ -1,0 +1,5 @@
+// there are few forms of 2p
+//form 0 -sliding window ( fixed k length window)
+//form 1 two pointers moving in same direction -- mainting a fixed gap
+//form 2 two pointers moving in opposite direction
+//form 3 two diff pointer in diff array

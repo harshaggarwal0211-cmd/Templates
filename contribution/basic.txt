@@ -1,0 +1,6 @@
+contribution technique-
+ * atomic item // find each item is being adding how many times
+ * extending ends -
+                    * extend
+                    * ds
+

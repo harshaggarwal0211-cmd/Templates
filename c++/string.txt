@@ -1,0 +1,9 @@
+s.size();
+s.length();
+s.substr(l,r);
+s.find(); returns a position ,  not a iterator
+reverse(s.begin(), s.end());
+sort(s.begin(), s.end());
+getline(cin, s);
+stoi(s);  ___---- string to int
+to_string(x);
