@@ -1,23 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
+int main(){
+    // try to convert l , r in 0 based indexing
     int n ; cin>>n;
-    vector<int> arr(n);
+    int arr[n];
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    vector<int> prefix(n+1,0);
-    prefix[0]=arr[0];
-    for(int i=1;i<n;i++){
-        prefix[i]=prefix[i-1]+arr[i];
+    int prefix[n+1];
+    prefix[0]=0;
+    prefix[1]=arr[0];
+    for(int i=2;i<n;i++){
+        prefix[i]=prefix[i-1]+arr[i-1];
     }
     int l , r ; cin>>l>>r;
-    int ans ;
-    if(l==0) ans = prefix[r];
-    else ans = prefix[r]-prefix[l-1];
+    l--; // iff l,r is in 1 based indexing 
+    // for query from l to r 
+    cout<<prefix[r]-prefix[l];
 }
-
 // #include<bits/stdc++.h>
 // using namespace std;
 

@@ -1,3 +1,5 @@
+// implict graph - directly nodes and edges will be given ;
+// explicit graph - (r,c)Node - state/config(where are we rn) , (r+1,c)Edge - transition(where we can me)
 #include <bits/stdc++.h>
 using namespace std;
 // tc , sc = O(n+2m)
