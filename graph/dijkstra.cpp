@@ -10,17 +10,17 @@ const int INF =1e9;
 
 vector<int> visited;
 vector<int> dist;
-void bfs01(int sc){
-    deque<int> q; /////////////////
+void dijkstra(int sc){
+    priority_queue<pair<int,int>> q; /////////////////
     visited.assign(n+1,0);
     dist.assign(n+1,INF);
 
     dist[sc]=0;
-    q.push_front(sc); ////////////////
+    q.push({-0,sc}); ////////////////
 
     while(!q.empty()){
-        int curr = q.front();
-        q.pop_front(); /////////////
+        int curr = q.top().S; ////////
+        q.pop(); /////////////
 
         if(visited[curr]) continue;
         visited[curr]=1;
@@ -28,8 +28,7 @@ void bfs01(int sc){
         for(auto x : adj[curr]){
             if(!visited[x.F] && dist[x.F]>dist[curr]+x.S){
                     dist[x.F]=dist[curr]+x.S;
-                    if(x.S==0) q.push_front(x.F); //////////////
-                    else q.push_back(x.F); //////////////////
+                    q.push({-dist[x.F],x.F}); //////////////
             }
         }
     }
